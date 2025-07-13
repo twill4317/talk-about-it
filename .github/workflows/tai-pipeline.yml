@@ -11,6 +11,7 @@ on:
       - 'apps/**'
       - 'libs/**'
       - '.github/workflows/**'
+  workflow_dispatch:
 
 jobs:
   build-api:
@@ -21,9 +22,9 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: 8.0.x
+          dotnet-version: 9.0.x
       - name: Build API
-        run: dotnet build ./apps/api-server
+        run: dotnet build ./apps/api-server/ApiServer
 
   build-web:
     runs-on: ubuntu-latest

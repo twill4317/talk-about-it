@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "vzRY8vvWHJ8=",
+  "success": true,
+  "projectFilePath": "/Users/marqclaire/Desktop/mediadrawer/apps/talk-about-it/apps/api-server/ApiServer/ApiServer.csproj",
+  "expectedPackageFiles": [
+    "/Users/marqclaire/.nuget/packages/microsoft.aspnetcore.openapi/9.0.1/microsoft.aspnetcore.openapi.9.0.1.nupkg.sha512",
+    "/Users/marqclaire/.nuget/packages/microsoft.openapi/1.6.17/microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}
