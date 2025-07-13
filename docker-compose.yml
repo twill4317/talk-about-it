@@ -8,8 +8,9 @@ services:
       - postgres
 
   web-client:
-    build: ./apps/web-client
-    dockerfile: Dockerfile
+    build: 
+      context: ./apps/web-client
+      dockerfile: Dockerfile
     ports: 
       - "3000:3000"
     
