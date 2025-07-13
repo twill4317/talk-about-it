@@ -1,0 +1,17 @@
+{
+    "name": "talk-about-it-suite",
+    "version": "1.0.0",
+    "private": true,
+    "workspaces": [
+        "apps/web-client",
+        "libs/shared"
+    ],
+    "scripts" : {
+        "build": "npm run build --workspace=web-client && npm run build --workspace=shared",
+        "start": "npm run start --workspace=web-client",
+        "lint": "npm run lint --workspace=web-client"
+    },
+    "devDependencies": {
+        "typescript": "^5.4.0"
+    }
+}

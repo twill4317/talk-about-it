@@ -1,0 +1,40 @@
+# .github/workflows/tai-pipeline.yml
+name: Talk About It Pipeline
+on:
+  push:
+    paths:
+      - 'apps/**'
+      - 'libs/**'
+      - '.github/workflows/**'
+  pull_request:
+    paths:
+      - 'apps/**'
+      - 'libs/**'
+      - '.github/workflows/**'
+
+jobs:
+  build-api:
+    runs-on: ubuntu-latest
+    name: Build API Server
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 8.0.x
+      - name: Build API
+        run: dotnet build ./apps/api-server
+
+  build-web:
+    runs-on: ubuntu-latest
+    name: Build Web Client
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+      - name: Install Web Client Deps
+        run: npm install --prefix ./apps/web-client
+      - name: Build Web Client
+        run: npm run build --prefix ./apps/web-client

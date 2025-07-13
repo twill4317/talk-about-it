@@ -1,0 +1,27 @@
+version: "3.8"
+services:
+  api-server:
+    build: ./apps/api-server
+    ports:
+      - "5000:80"
+    depends_on:
+      - postgres
+
+  web-client:
+    build: ./apps/web-client
+    ports: 
+      - "3000:3000"
+    
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: debate
+    ports:
+      - "5432:5432"
+
+  redis:
+    image: redis
+    ports:
+      - "6379:6379"
