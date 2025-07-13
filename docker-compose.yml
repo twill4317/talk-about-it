@@ -9,6 +9,7 @@ services:
 
   web-client:
     build: ./apps/web-client
+    dockerfile: Dockerfile
     ports: 
       - "3000:3000"
     
