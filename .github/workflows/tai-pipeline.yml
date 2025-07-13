@@ -24,7 +24,7 @@ jobs:
         with:
           dotnet-version: 8.0.x
       - name: Build API
-        run: dotnet build ./apps/api-server
+        run: dotnet build ./apps/api-server/ApiServer
 
   build-web:
     runs-on: ubuntu-latest
