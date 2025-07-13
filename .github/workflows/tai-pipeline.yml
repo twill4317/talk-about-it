@@ -4,7 +4,7 @@ name: Talk About It Pipeline
 permissions: 
   contents: read
   packages: write
-  
+
 on:
   push:
     paths:
@@ -106,4 +106,3 @@ jobs:
 
       - name: Docker Compose Down
         run: docker compose down
-
