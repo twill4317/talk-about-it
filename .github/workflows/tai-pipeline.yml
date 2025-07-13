@@ -11,6 +11,7 @@ on:
       - 'apps/**'
       - 'libs/**'
       - '.github/workflows/**'
+  workflow_dispatch:
 
 jobs:
   build-api:
