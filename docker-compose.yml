@@ -9,8 +9,7 @@ services:
 
   web-client:
     build: 
-      context: ./apps/web-client
-      dockerfile: Dockerfile
+      image: ghcr.io/twill4317/tai-web-client:ci
     ports: 
       - "3000:3000"
     
