@@ -63,8 +63,8 @@ jobs:
 
       - name: Build and Push API Server Docker Image
         run: | 
-          docker build -t ghcr.io/${{github.repository_owner}}/tai-api-server ./apps/api-server/ApiServer
-          docker push ghcr.io/${{github.repository_owner}}/tai-api-service
+          docker build -t ghcr.io/${{github.repository_owner}}/tai-api-server:latest ./apps/api-server/ApiServer
+          docker push ghcr.io/${{github.repository_owner}}/tai-api-service:latest
 
       - name: Build And Push Web Client Docker Image
         run: |
