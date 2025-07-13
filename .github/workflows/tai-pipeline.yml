@@ -11,6 +11,9 @@ on:
       - 'apps/**'
       - 'libs/**'
       - '.github/workflows/**'
+      - '.github/workflows/**'
+      - 'docker-compose.yml'
+      - '**.yml'
   pull_request:
     paths:
       - 'apps/**'
