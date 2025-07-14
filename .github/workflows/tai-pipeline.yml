@@ -91,7 +91,7 @@ jobs:
           POSTGRES_PASSWORD: password
           POSTGRES_DB: debate
         ports:
-          - "5432:5432"
+          - "8080:8080"
       
       redis:
         image: redis
