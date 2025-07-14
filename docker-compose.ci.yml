@@ -1,0 +1,8 @@
+services:
+  api-server:
+    build: null
+    image: ghcr.io/twill4317/tai-api-server:latest
+
+  web-client:
+    build: null
+    image: ghcr.io/twill4317/tai-web-client:latest
