@@ -96,7 +96,7 @@ jobs:
       redis:
         image: redis
         ports: 
-          - "6379:6379"
+          - "8888:8888"
 
     steps:
       - uses: actions/checkout@v3
