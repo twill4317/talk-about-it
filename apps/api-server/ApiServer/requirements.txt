@@ -1,0 +1,6 @@
+fastapi
+uvicorn[standard]
+flask
+redis
+python-socketio    # For WebSocket management (optional)
+fastapi-socketio   # Optional, only if you want Flask-style WS handling
