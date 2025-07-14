@@ -1,17 +1,22 @@
 version: "3.8"
 services:
   api-server:
-    build: ./apps/api-server
+    build:
+      context: ./apps/api-server
+      dockerfile: Dockerfile
     ports:
       - "5000:80"
     depends_on:
       - postgres
+      - redis
 
   web-client:
-    image: ghcr.io/twill4317/tai-web-client:ci
-    ports: 
+    build:
+      context: ./apps/web-client
+      dockerfile: Dockerfile
+    ports:
       - "3000:3000"
-    
+
   postgres:
     image: postgres
     environment:
